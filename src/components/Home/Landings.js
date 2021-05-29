@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Spinner from '../layout/Spinner';
 import CountriesContainer from './CountriesContainer'; 
 
+
 export class Landing extends Component {
   render() {
     const { loading } = this.props;

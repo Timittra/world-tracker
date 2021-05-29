@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
 import { fetchCountry, setLoading } from '../../actions/searchActions';
-
 import Spinner from '../layout/Spinner';
+
 
 export class Country extends Component {
   componentDidMount() {
@@ -30,13 +29,13 @@ export class Country extends Component {
                 <strong>Currency:</strong> {country.Currency}
               </li>
               <li className="list-group-item">
-                <strong>calling Code:</strong> {country.CallingCode}
+                <strong>Calling Code:</strong> {country.CallingCode}
               </li>
               <li className="list-group-item">
                 <strong>Language:</strong> {country.Language}
               </li>
               <li className="list-group-item">
-                <strong>Famous place:</strong> {country.FamousPlace}
+                <strong>Famous Place:</strong> {country.FamousPlace}
               </li>
               <li className="list-group-item">
                 <strong>Population:</strong> {country.Population}
@@ -59,7 +58,7 @@ export class Country extends Component {
                 rel="noopener noreferrer"
                 className="btn btn-primary"
               >
-                View on 
+                View On 
               </a>
               <Link to="/" className="btn btn-default text-light">
                 Go Back To Search

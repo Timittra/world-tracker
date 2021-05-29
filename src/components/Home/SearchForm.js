@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faSearch } from '@fortawesome/free-solid-svg-icons'; 
-import {searchCountry, fetchCountries} from '../../actions/searchActions';
+import {searchCountry, fetchCountries, setLoading} from '../../actions/searchActions';
 import {connect} from 'react-redux'; 
 
 const searchStyle={
@@ -21,10 +21,8 @@ export class SearchForm extends Component {
   onSubmit = e => {
     e.preventDefault();
     this.props.fetchCountries(this.props.text);
-    // this.props.setLoading();
+    this.props.setLoading();
   };
-
-
 
   render() {
     return (
@@ -55,4 +53,4 @@ const mapStateToProps = state=> ({
     text: state.countries.text
 })
 
-export default connect( mapStateToProps, {searchCountry, fetchCountries})(SearchForm); 
+export default connect( mapStateToProps, {searchCountry, fetchCountries, setLoading})(SearchForm); 

@@ -5,7 +5,7 @@ import CountryCard from './CountryCard';
 export class CountriesContainer extends Component {
     render() {
         const {countries} = this.props; 
-        let content = ""; 
+        let content = ''; 
 
         content = countries.length > 0 ? 
         countries.map((country, index) => (
