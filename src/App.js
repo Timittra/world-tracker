@@ -9,6 +9,7 @@ import store from './store';
 import Country from './components/Home/Country';
 
 
+// function App() {
 class App extends Component {
     render() {
   return (
