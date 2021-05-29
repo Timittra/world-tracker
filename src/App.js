@@ -21,7 +21,7 @@ function App() {
     <div>
       <Header />
       <Landings/>
-      <Route exact path="/" component={Landings} />
+      {/* <Route exact path="/" component={Landings} /> */}
       <Route exact path="/country/:id" component={Country} />
       <Footer />
     </div>
