@@ -19,13 +19,13 @@ export const fetchCountries = text => dispatch =>{
       )
       .catch(err => console.log(err));
 };
-export const fetchCountry = id => dispatch => {
+export const fetchCountry = name => dispatch => {
   axios
-    .get(`https://restcountries.eu/rest/v2/name/?apikey=${APIKey}&i=${id}`)
+    .get(`https://restcountries.eu/rest/v2/name/${name}`)
     .then(response =>
       dispatch({
         type: FETCH_COUNTRY,
-        payload: response.data
+        payload: response.data[0]
       })
     )
     .catch(err => console.log(err));

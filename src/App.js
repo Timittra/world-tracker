@@ -18,7 +18,7 @@ class App extends Component {
     <div>
       <Header />
       <Route exact path="/" component={Landings} />
-      <Route exact path="/country/:id" component={Country} />
+      <Route exact path="/country/:name" component={Country} />
       <Footer />
     </div>
   </Router>
